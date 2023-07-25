@@ -1,21 +1,20 @@
-
 // Simulador de Lista de Tareas
 
-//Solicito nombre al usuario
+// Solicito nombre al usuario
 let nombre = prompt("Por favor, ingresa tu nombre:");
 
-//Agregar elementos a la lista
+// Agregar elementos a la lista
 let listaCompras = [];
 
 do {
   let articulo = prompt(nombre + ", ¿qué quieres agregar a la lista de compras?");
   listaCompras.push(articulo);
 
-  //Mostrar los elementos de la lista actualizados
+  // Mostrar los elementos de la lista actualizados
   console.log("Lista de compras:");
-  for (let i = 0; i < listaCompras.length; i++) {
-    console.log("- " + listaCompras[i]);
-  }
+  listaCompras.forEach((item, index) => {
+    console.log("- " + item);
+  });
 
   let respuesta = prompt("¿Quieres agregar algo más a la lista? (Sí/No)");
   if (respuesta.toLowerCase() !== "sí" && respuesta.toLowerCase() !== "si") {
@@ -23,27 +22,29 @@ do {
   }
 } while (true);
 
-//Mostrar mensaje de despedida
+// Mostrar mensaje de despedida
 alert("¡Muchas gracias por pasar, " + nombre + "!");
 
 class producto {
-  constructor(nombre, precio, vendido){
+  constructor(nombre) {
     this.nombre = nombre.toUpperCase();
-    this.precio = Number(precio);
-    this.vendido = false;
   }
-
-
 }
 
-const carrito = []
+const carrito = [];
 
-const producto1 = new producto('arroz', 200)
-const producto2 = new producto('fideos', 250)
+// Convertir elementos de listaCompras en objetos de la clase producto y agregarlos a carrito
+for (let i = 0; i < listaCompras.length; i++) {
+  const nombreProducto = listaCompras[i];
+  const nuevoProducto = new producto(nombreProducto);
+  carrito.push(nuevoProducto);
+}
 
-carrito.push(producto1, producto2)
+// Mostrar elementos agregados al carrito usando .reduce()
+const productosAgregados = carrito.reduce((acc, producto) => {
+  return acc + "- " + producto.nombre + "\n";
+}, '');
 
-console.log(carrito)
-
+alert(nombre + ", estos son los productos que has agregado al carrito:\n\n" + productosAgregados);
 
 
