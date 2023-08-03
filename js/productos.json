@@ -1,0 +1,62 @@
+[
+    {
+        "id": "abrigo-01",
+        "titulo": "Campera Raptor",
+        "imagen": "../img/Campera Raptor.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 15000
+    },
+    {
+        "id": "abrigo-02",
+        "titulo": "Camisaco Jolie",
+        "imagen": "../img/Camisaco Jolie.jpg",
+        "categoria": {
+            "nombre": "Abrigos",
+            "id": "abrigos"
+        },
+        "precio": 20000
+    },
+    {
+        "id": "camiseta-01",
+        "titulo": "Remera Harley",
+        "imagen": "../img/Remera Harley.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 4000
+    },
+    {
+        "id": "camiseta-02",
+        "titulo": "Remeron Ultra Speed",
+        "imagen": "../img/Remeron Ultra Speed.jpg",
+        "categoria": {
+            "nombre": "Camisetas",
+            "id": "camisetas"
+        },
+        "precio": 4750
+    },
+    {
+        "id": "pantalon-01",
+        "titulo": "Jean Aron",
+        "imagen": "../img/Jean Aron.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 6120
+    },
+    {
+        "id": "Jean Cirino",
+        "titulo": "Pantalón Cargo",
+        "imagen": "../img/Jean Cirino.jpg",
+        "categoria": {
+            "nombre": "Pantalones",
+            "id": "pantalones"
+        },
+        "precio": 11900
+    }
+]
